@@ -1,0 +1,172 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr 1fr 1fr;
+  grid-template-rows: 0.7fr 1.7fr 0.6fr;
+  grid-template-areas: "encabezado encabezado encabezado encabezado" "contenido contenido contenido contenido" 
+  "pie-de-pagina pie-de-pagina pie-de-pagina pie-de-pagina";
+}
+
+
+@media screen and (max-width: 411px) {
+      .contenido{
+        width: 411px;
+      }
+
+      .titulo{
+        width: 411px;
+      }
+
+      .encabezado{
+        width: 411px;
+      }
+
+      .menu-principal{
+        width: 411px;
+      }
+
+      .logo{
+        width: 411px;
+      }
+}
+
+.encabezado {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 0.4fr;
+  grid-template-rows: 1.4fr 0.6fr;
+  grid-template-areas: "titulo titulo logo" "menu-principal menu-principal menu-principal";
+  grid-area: encabezado;
+   background-color: #AC58FA;
+  height: 200px;
+  width: 100%;
+  padding-top: 7px;
+}
+
+.logo { grid-area: logo;
+        bottom: 0px;
+        margin-left: 40px;
+         }
+
+.titulo { grid-area: titulo;
+          text-align: center;
+          font-size: 20px;
+          color: black;
+          width: 1350px;
+         }
+
+
+.titulo > h1 {
+      font-family: "Ink Free";
+      font-size: 50px;
+      color: black;
+}
+
+.menu-principal { grid-area: menu-principal; 
+                  background-color: #8A084B;
+                  text-align: left;
+                  font-size: 15px;
+                  bottom: 0px;
+                  padding-top: 20px;
+                 }
+
+.menu-principal >a {
+      font-family: "Ink Free";
+      font-weight: bold;
+      color:black;
+      font-size: 20px;
+      margin-left: 28%;
+
+    }
+
+
+
+.contenido { grid-area: contenido;
+              background-color: #0B0B3B;
+              width: 100%;
+              font-family: "Bookman Old Style";
+              text-align: center;
+              font-size: 20px;
+              color:white;
+              
+              }
+
+
+.pie-de-pagina {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  grid-template-areas: ".tattooideal tattooideal comentarios localizacion " ".tattooideal tattooideal comentarios localizacion ";
+  grid-area: pie-de-pagina;
+  background-color: #8A084B;
+  bottom: 0px;
+  height: 150px;
+  width: 100%;
+  font-size: 20px;
+
+}
+
+.tattooideal { grid-area: tattooideal;
+              text-align: right;
+               margin-top: 20px;
+                 }
+
+.tattooideal >p >a{
+      font-family: "Ink Free";
+      font-weight: bold;
+      color: black;
+      
+    }
+
+.enviar{
+  margin-bottom: 5px;
+}
+
+.comentarios { grid-area: comentarios;
+                bottom: 0px;
+                margin-left: 70px;
+                 margin-right: 70px;
+                 margin-top: 20px;
+                 }
+
+.comentarios >p >a{
+      font-family: "Ink Free";
+      font-weight: bold;
+      color: black;
+}
+
+
+.localizacion { grid-area: localizacion;
+                bottom: 0px;
+                text-align: right;
+                 margin-top: 20px;
+                 display: flex;
+                 flex: 50%;
+
+                 animation-duration: 3s;
+                animation-name: slidein;
+}
+
+                @keyframes slidein {
+                from {
+                margin-left: 100%;
+                 width: 300%
+                  }
+
+                to {
+                margin-left: 0%;
+                width: 100%;
+                 }
+                }
+                 
+
+.localizacion >p >a{
+      font-family: "Ink Free";
+      font-weight: bold;
+      margin-right: 30px;
+      color: black;
+
+
+      }
+
+
+
+
